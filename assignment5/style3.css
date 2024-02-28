@@ -1,0 +1,200 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #292828;
+}
+
+div {
+    position: absolute;
+    transition: all 1.5s;
+}
+
+#shape1 {
+    font-size: 100px;
+    color: #4598bc;
+    top: 10%;
+    left: 10%;
+    transform: rotate(0deg);
+}
+
+#shape1:hover {
+    transform: rotate(360deg) scale(5);
+    color: #9400d3;
+}
+
+#shape2 {
+    width: 80px;
+    height: 80px;
+    background-color: #87cefa;
+    top: 80%;
+    left: 30%;
+    transform: skew(0deg);
+}
+
+#shape2:hover {
+    transform: skew(20deg, 20deg) scale(3);
+    background-color: #4682b4;
+}
+
+#shape3 {
+    width: 80px;
+    height: 80px;
+    background-color: #98fb98;
+    top: 50%;
+    left: 90%;
+    border-radius: 80%;
+}
+
+#shape3:hover {
+    transform: scale(10);
+    background-color: #008000;
+}
+
+#shape4 {
+    font-size: 80px;
+    color: #c881c8;
+    top: 10%;
+    left: 40%;
+}
+
+#shape4:hover {
+    transform: scale(1.5) rotate(580deg);
+    color: #9400d3;
+}
+
+#shape5 {
+    width: 70px;
+    height: 70px;
+    background-color: #ffdead;
+    top: 70%;
+    left: 75%;
+    border-radius: 50%;
+}
+
+#shape5:hover {
+    transform: scale(-10);
+    background-color: #ff8c00;
+}
+
+#shape6 {
+    font-size: 100px;
+    color: #e8f13e;
+    top: 30%;
+    left: 60%;
+}
+
+#shape6:hover {
+    transform: rotate(4005deg) scale(3);
+    color: #f70a0a;
+}
+
+#shape7 {
+    font-size: 50px;
+    color: #ff69b4;
+    top: 85%;
+    left: 10%;
+}
+
+#shape7:hover {
+    transform: scale(-5) rotate(-900deg);
+    color: #ff1493;
+}
+
+#shape8 {
+    width: 10px;
+    height: 100px;
+    background-color: #ffe4b5;
+    top: 15%;
+    left: 85%;
+}
+
+#shape8:hover {
+    transform: scale(50);
+    background-color: #2bc26a;
+}
+
+#shape9 {
+    font-size: 70px;
+    color: #985fe3;
+    top: 40%;
+    left: 30%;
+}
+
+#shape9:hover {
+    transform: scale(10);
+    color: #a9a9a9;
+}
+
+#shape10 {
+    font-size: 80px;
+    color: #ff6347;
+    top: 60%;
+    left: 5%;
+}
+
+#shape10:hover {
+    transform: scale(1.5) rotate(360000deg);
+    color: #ff0000;
+}
+
+#shape11 {
+    width: 80px;
+    height: 80px;
+    background-color: #fafad2;
+    top: 5%;
+    left: 70%;
+}
+
+#shape11:hover {
+    transform: scale(2);
+    background-color: #ffff00;
+}
+
+#shape12 {
+    font-size: 60px;
+    color: #b0e0e6;
+    top: 50%;
+    left: 50%;
+}
+
+#shape12:hover {
+    transform: scale(1.5) rotate(-1080deg);
+    color: #00ced1;
+}
+
+#shape13 {
+    font-size: 50px;
+    color: #dda0dd;
+    top: 30%;
+    left: 10%;
+}
+
+#shape13:hover {
+    transform: scale(10) rotate(90deg);
+    color: #800080;
+}
+
+#shape14 {
+    font-size: 90px;
+    color: #afeeee;
+    top: 90%;
+    left: 55%;
+}
+
+#shape14:hover {
+    transform: scale(3);
+    color: #20b2aa;
+}
+
+#shape15 {
+    font-size: 75px;
+    color: #ffb6c1;
+    top: 30%;
+    left: 80%;
+}
+
+#shape15:hover {
+    transform: scale(2) rotate(360deg);
+    color: #ff69b4;
+}
