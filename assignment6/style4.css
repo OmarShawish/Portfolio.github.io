@@ -62,12 +62,34 @@ footer {
 }
 
 /* Responsive Design */
-@media all and (min-width: 769px) {
-    .sections-container {
-        width: 80%;
+@media all and (max-width: 768px) {
+    header, footer {
+        padding: 15px; /* Reduced padding */
+        height: auto; /* Flexible height */
     }
-}
 
+    main {
+        padding: 40px 10px; /* Reduced padding */
+        background-size: cover; /* Adjust background size */
+    }
+
+    .sections-container {
+        width: 90%; /* Increased width for smaller screens */
+        padding: 0 10px; /* Reduced side padding */
+    }
+
+    section {
+        width: 100%; /* Full width for smaller screens */
+        margin: 10px 0; /* Reduced spacing */
+        padding: 15px; /* Adjusted padding */
+    }
+
+    h1, h2 {
+        font-size: 1.5em; /* Adjusted font size for headings */
+    }
+
+    /* Add any additional mobile-specific styles here */
+}
 @media all and (min-width: 1024px) {
     .sections-container {
         width: 80%;
