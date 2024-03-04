@@ -1,0 +1,60 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Mobile First CSS */
+body {
+    background-color: #f0e6f6; /* Soft lilac background */
+    color: #333; /* Dark gray for text */
+}
+
+header, footer {
+    background-color: #ffefd5; /* Pale peach */
+    color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    padding: 15px;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for contrast */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* Responsive Design */
+@media all and (min-width: 769px) {
+    #container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    section {
+        /* Adjustments for tablet screens */
+    }
+}
+
+@media all and (min-width: 1024px) {
+    section {
+        width: 48%;
+        float: left;
+        margin-right: 4%;
+    }
+
+    section:last-child {
+        margin-right: 0;
+    }
+}
