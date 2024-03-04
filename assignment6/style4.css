@@ -1,60 +1,79 @@
-/* Basic CSS resets -- leveling slight inconsistencies in browsers */
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
-}
-
-html {
-    font-size: 1em;
-    line-height: 1.4em;
     font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+	font-family: "Protest Revolution", sans-serif;
 }
 
-/* Mobile First CSS */
+/* Base styles */
 body {
-    background-color: #f0e6f6; /* Soft lilac background */
-    color: #333; /* Dark gray for text */
+    background-color: #474747; 
+	font-family: "Protest Revolution", sans-serif;
 }
 
 header, footer {
-    background-color: #ffefd5; /* Pale peach */
-    color: #333;
+    background-color: #474747; /* Cream color for header and footer */
+    color: #f5f5dc; /* Adjust text color as needed */
     text-align: center;
-    padding: 10px;
+    padding: 30px ;
+    height: 40px; /* Ensure header and footer are of equal height */
 }
 
 main {
-    padding: 15px;
+    background-image: url(img/Angel\ .jpg); /* Your background image */
+    background-size: contain; /* Adjust size as needed */
+    background-position: center center; /* Center the image perfectly */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    padding: 80px 20px; /* Padding to prevent overlap with header and footer */
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: calc(100vh - 120px); /* Full height minus header and footer */
+}
+
+.sections-container {
+    width: 80%; /* Adjust width */
+    max-width: 800px; /* Maximum width */
+    padding: 0 20px; /* Additional padding on the left and right */
 }
 
 section {
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for contrast */
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px; /* Optional: rounded corners */
+    margin: 20px 0; /* Spacing between sections */
+    border-radius: 10px;
+    width: 60%; /* Adjust width as needed */
+    max-width: 600px; /* Adjust maximum width as needed */
+    text-align: left; /* Left align text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
+}
+/* Headings */
+h1, h2 {
+    color: #f5f5dc;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    clear: both; /* Ensure footer is below all content */
 }
 
 /* Responsive Design */
 @media all and (min-width: 769px) {
-    #container {
+    .sections-container {
         width: 80%;
-        margin: 0 auto;
-    }
-
-    section {
-        /* Adjustments for tablet screens */
     }
 }
 
 @media all and (min-width: 1024px) {
-    section {
-        width: 48%;
-        float: left;
-        margin-right: 4%;
+    .sections-container {
+        width: 80%;
     }
 
-    section:last-child {
-        margin-right: 0;
+    section {
+        width: 100%; /* Keep sections full width of container */
     }
 }
