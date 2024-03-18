@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Assignment 7</title>
+    <link rel="stylesheet" href="style7.css">    
+</head>
+<body>
+    <div class="container">
+        <form id="fortuneForm">
+            <p>Ask the Culinary Oracle your food-related question:</p>
+            <input type="text" id="question" placeholder=" e.g. What cuisine should I try next?">
+            <button id="oracleButton" class="oracle-button">Ask the Oracle</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        document.getElementById('oracleButton').addEventListener('click', getCulinaryFortune);
+        document.getElementById('question').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                getCulinaryFortune();
+            }
+        });
+
+        function getCulinaryFortune() {
+            const answers = [
+            "Consider exploring the vibrant flavors of Vietnamese pho.",
+            "A day for culinary experimentation: how about trying fusion cuisine at home?",
+            "Ever tried making your own sushi? Today could be the day.",
+            "Why not challenge yourself with a classic French recipe tonight?",
+            "Discover the rich and hearty tastes of traditional Moroccan tagine.",
+            "It's a perfect time for a Mediterranean spread - think olives, feta, and fresh bread.",
+            "How about a BBQ night? Sometimes, simple and smoky is the way to go.",
+            "Embrace the art of Italian cooking with a risotto - patience brings flavor.",
+            "Indulge in the comfort of a homemade pizza, topped just the way you like it.",
+            "Consider the tangy and spicy flavors of Korean kimchi - it's a culinary adventure.",
+            "A gourmet burger night? Experiment with unique toppings.",
+            "Explore the subtleties of Japanese cuisine with a tempura night.",
+            "Channel your inner baker - maybe it's time to perfect that sourdough.",
+            "Why not make tonight a Spanish evening with paella on the menu?",
+            "The robust flavors of a classic beef stew might just hit the spot."
+            ];
+            const randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = '';
+            typeWriterEffect(messageElement, randomAnswer, 25);
+            buttonCooldown(document.getElementById('oracleButton'), 3000);
+        }
+
+        function typeWriterEffect(element, text, speed) {
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+            typeWriter();
+        }
+
+        function buttonCooldown(button, duration) {
+            button.disabled = true;
+            setTimeout(() => {
+                button.disabled = false;
+            }, duration);
+        }
+    </script>
+</body>
+</html>

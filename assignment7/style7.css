@@ -1,0 +1,129 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Cormorant Unicase', serif;
+    background-image: url('img/oozie.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.oracle-button {
+    background-color: #39803b;
+    color: white; 
+    padding: 10px 25px;
+    font-size: 15px; 
+    font-family: 'Cormorant Unicase', serif;
+    border: 3px solid #263f24e2; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(214, 255, 214, 0.5);
+    letter-spacing: 1px;
+}
+
+.oracle-button:hover {
+    background-color: #efe772e4;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border: 3px solid #717151af; 
+    color: #717151; 
+    transform: translateY(-2px); 
+}
+
+.oracle-button:active {
+    transform: translateY(1px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.message {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    display: none;
+    opacity: 0;
+    transition: opacity 1s, display 0s 1s;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.message.visible {
+    opacity: 1;
+    display: block;
+    transition-delay: 0s;
+}
+
+#question {
+    width: 60%; 
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 3px solid #263f24e2;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); 
+    margin-bottom: 15px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#question:focus {
+    border-color: #369c39;
+    box-shadow: 0 4px 8px rgba(214, 255, 214, 0.7);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%; 
+        padding: 20px; 
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .oracle-button, .question-input {
+        font-size: 14px;
+        padding: 8px 15px; 
+    }
+
+    #message {
+        font-size: 14px;
+    }
+}
