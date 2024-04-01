@@ -88,7 +88,6 @@ button:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
 }
 
-/* Responsive Design */
 @media screen and (min-width: 768px) {
     #container {
         width: 75%;
@@ -107,4 +106,29 @@ button:hover {
     #content-war { top: 250px; }
     #content-famine { top: 480px; }
     #content-death { top: 710px; }
+}
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    #buttons-container button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    #central-content figure {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #central-content img {
+        width: 100%;
+        height: auto;
+    }
+
+    #central-content figcaption {
+        font-size: 0.9em; 
+    }
 }
