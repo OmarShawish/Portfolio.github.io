@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Echoes of the Apocalypse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style9.css">	
+</head>
+<body>
+    <header>
+        <h1>Echoes of the Apocalypse</h1>
+    </header>
+    
+    <main>
+        <!-- Main Content: Abstract Image or Quote -->
+        <section id="main-content">
+            <p>"And I looked, and behold a pale horse: and his name that sat on him was Death, and Hell followed with him."</p>
+            <p class="author">- Revelation 6:8, The Bible</p>
+        </section>
+
+        <!-- Buttons for Each Horseman -->
+        <div id="buttons-container">
+            <button id="btn-conquest">Conquest</button>
+            <button id="btn-war">War</button>
+            <button id="btn-famine">Famine</button>
+            <button id="btn-death">Death</button>
+        </div>
+
+        <!-- Centralized Content Section -->
+        <section id="central-content" class="hidden-content">
+            <figure>
+                <img id="dynamic-image" src="" alt="">
+                <figcaption id="dynamic-caption"></figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <!-- jQuery Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var imageContent = {
+                conquest: { src: "omar.jpg", caption: "Conquest - The rider of the white horse, often interpreted as a symbol of righteousness and victory, or a harbinger of the apocalypse." },
+                war: { src: "jackson.jpg", caption: "War - The red horseman, representing conflict and destruction, a force that ignites wars and chaos among nations." },
+                famine: { src: "gibson.jpg", caption: "Famine - The black horse bears scales, symbolizing the scarcity and imbalance that leads to hunger and desperation." },
+                death: { src: "jyn.jpg", caption: "Death - The final horseman, riding a pale horse, signifies the end of all things and the inevitability of death." }
+            };
+    
+            $('button').click(function() {
+                var horseman = this.id.replace('btn-', '');
+                $('#central-content').fadeOut(2000, function() {
+                    $('#dynamic-image').attr('src', imageContent[horseman].src);
+                    $('#dynamic-caption').text(imageContent[horseman].caption);
+                    $(this).fadeIn(2000);
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

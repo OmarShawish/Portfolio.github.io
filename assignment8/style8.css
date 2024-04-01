@@ -1,0 +1,81 @@
+body {
+    background-color: #3f634c;
+    font-family: 'Protest Revolution', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #d8fde5;
+}
+
+#container {
+    max-width: 1000px;
+    margin: auto;
+    background-color: #60856e;
+    box-shadow: 0 2px 10px rgba(20, 36, 18, 0.7); 
+    padding: 20px;
+}
+
+header, main, footer {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #B0FFCD;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img, .responsive iframe {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+figure {
+    margin: 20px 0;
+}
+
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+}
+
+
+@media only screen and (min-width: 769px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main > * {
+        flex: 1;
+        margin: 10px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    main > * {
+        flex-basis: calc(33.333% - 20px);
+    }
+}
+
+figure.responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+figure.responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
