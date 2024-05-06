@@ -104,7 +104,7 @@ header, footer {
     max-width: 275px; /* Ensures the image is not larger than 275px but can shrink */
     height: auto;
     padding: 25px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 @media (max-width: 500px) {
     .content-section {
